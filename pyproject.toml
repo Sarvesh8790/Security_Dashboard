@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "security-dashboard"
+version = "0.1.0"
+description = "Security dashboard that aggregates findings from AWS Security Hub and GitHub Advanced Security"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Security Team"}]
+dependencies = [
+  "boto3>=1.28.0",
+  "botocore>=1.31.0",
+  "requests>=2.31.0"
+]
+
+[project.scripts]
+security-dashboard = "security_dashboard.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["security_dashboard*"]
