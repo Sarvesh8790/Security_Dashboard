@@ -1,0 +1,52 @@
+[
+  {
+    "provider": "AWS Security Hub",
+    "id": "arn:aws:securityhub:us-east-1:123456789012:finding/1",
+    "title": "S3 bucket allows public read",
+    "severity": "HIGH",
+    "description": "Bucket example-bucket is publicly readable.",
+    "url": "https://console.aws.amazon.com/securityhub/home?region=us-east-1#/findings",
+    "resource": "arn:aws:s3:::example-bucket",
+    "created_at": "2023-11-01T12:00:00+00:00"
+  },
+  {
+    "provider": "AWS Security Hub",
+    "id": "arn:aws:securityhub:us-east-1:123456789012:finding/2",
+    "title": "IAM user has administrator access",
+    "severity": "CRITICAL",
+    "description": "User alice has AdministratorAccess policy attached.",
+    "url": "https://console.aws.amazon.com/iam/home#/users/alice",
+    "resource": "arn:aws:iam::123456789012:user/alice",
+    "created_at": "2023-10-29T08:30:00+00:00"
+  },
+  {
+    "provider": "GitHub Code Scanning",
+    "id": "42",
+    "title": "Use of insecure random",
+    "severity": "MEDIUM",
+    "description": "The function random.random() is used for cryptographic purposes.",
+    "url": "https://github.com/example-org/example-repo/code-scanning/42",
+    "resource": "app/security.py",
+    "created_at": "2023-11-02T09:15:00+00:00"
+  },
+  {
+    "provider": "GitHub Dependabot",
+    "id": "1337",
+    "title": "High severity vulnerability in requests",
+    "severity": "HIGH",
+    "description": "requests 2.19.0 is vulnerable to CVE-2018-18074.",
+    "url": "https://github.com/example-org/example-repo/security/dependabot/1337",
+    "resource": "requirements.txt",
+    "created_at": "2023-11-03T14:45:00+00:00"
+  },
+  {
+    "provider": "GitHub Secret Scanning",
+    "id": "9001",
+    "title": "AWS Access Key exposed",
+    "severity": "CRITICAL",
+    "description": "Secret scanning detected an AWS access key in commit abc123.",
+    "url": "https://github.com/example-org/example-repo/secret-scanning/9001",
+    "resource": "commit/abc123",
+    "created_at": "2023-11-04T10:20:00+00:00"
+  }
+]
