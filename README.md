@@ -58,6 +58,7 @@ The CLI also supports exporting data in JSON form:
 security-dashboard --sample-data --output-json
 ```
 
+
 ### Running Tests
 
 ```bash
