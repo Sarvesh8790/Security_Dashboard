@@ -30,12 +30,6 @@ source .venv/bin/activate
 pip install -e .
 ```
 
-Or use the included `Makefile` helpers:
-
-```bash
-make install
-```
-
 ### Usage
 
 Show a demo using the bundled sample data:
@@ -64,33 +58,6 @@ The CLI also supports exporting data in JSON form:
 security-dashboard --sample-data --output-json
 ```
 
-### Local deployment and smoke test
-
-If you want to validate the dashboard locally without managing the virtual
-environment manually, the `Makefile` provides shortcuts:
-
-```bash
-# Create the virtual environment and install dependencies
-make install
-
-# Run the CLI against the bundled sample data
-make run-sample
-
-# Execute the automated test suite
-make test
-```
-
-If your environment blocks access to package indexes, you can still run the CLI
-without installation by executing:
-
-```bash
-python -m security_dashboard.cli --sample-data
-```
-
-The sample run renders an aggregate table that demonstrates how AWS Security Hub
-and GitHub findings are consolidated. When you're ready to connect to your own
-services, export the required environment variables and use `make run-live` to
-pull real findings.
 
 ### Running Tests
 
