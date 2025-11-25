@@ -79,25 +79,3 @@ examples/
 └── sample_findings.json     # Sample findings used for demo mode
 ```
 
-## Notes
-
-- Network calls to AWS or GitHub are only made when the corresponding CLI flags are
-  enabled and credentials are available.
-- The sample data can be extended or replaced to reflect your organisation's context.
-- This repository starts life locally. To publish it to your own GitHub account:
-  1. Create a new empty repository on GitHub (do not initialise it with a README or
-     `.gitignore`).
-  2. Add it as a remote in this project directory:
-
-     ```bash
-     git remote add origin git@github.com:<your-account>/<your-repo>.git
-     ```
-
-  3. Push the existing history:
-
-     ```bash
-     git push -u origin main
-     ```
-
-  After the push finishes, the project will appear on your GitHub page and future
-  commits can be published with `git push`.
